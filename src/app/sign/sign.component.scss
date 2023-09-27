@@ -41,10 +41,11 @@ button{
 }
 
 .signup{
-    margin-right: 30px;
+    padding-right: 50px !important;
+    border-right: 1px solid $main-blue;
 }
 .login{
-    margin-left: 30px;
+    padding-left: 50px !important;
 }
 
 .forgot-password{
