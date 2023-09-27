@@ -9,81 +9,116 @@
     </div>
     <div class="row">
       <div class="col signup">
-        <div class="form-group row">
-            <div class="col">
-                <label for="name-input">Nombre</label>
-                <input type="text" class="form-control" id="name-input">
+        <form [formGroup]="form">
+            <div class="form-group row">
+                <div class="col">
+                    <label for="nameInput" [ngClass]="{ 'red-color': submitted && f['nameInput'].errors }">Nombre</label>
+                    <input type="text" class="form-control" id="nameInput" [ngClass]="{ 'is-invalid': submitted && f['nameInput'].errors }" formControlName="nameInput">
+                    <div *ngIf="submitted && f['nameInput'].errors" class="invalid-feedback">
+                        <div *ngIf="f['nameInput'].errors['required']">El nombre es requerido</div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="form-group row">
-            <div class="col">
-                <label for="age-input">Edad</label>
-                <input type="number" class="form-control" id="age-input">
+            <div class="form-group row">
+                <div class="col">
+                    <label for="ageInput" [ngClass]="{ 'red-color': submitted && f['ageInput'].errors }">Edad</label>
+                    <input type="number" class="form-control" id="ageInput" [ngClass]="{ 'is-invalid': submitted && f['ageInput'].errors }" formControlName="ageInput">
+                    <div *ngIf="submitted && f['ageInput'].errors" class="invalid-feedback">
+                        <div *ngIf="f['ageInput'].errors['required']">La edad es requerida</div>
+                    </div>
+                </div>
+                <div class="col">
+                    <label for="gender-input">Género</label>
+                    <select class="form-control" id="gender-input">
+                        <option>Femenino</option>
+                        <option>Masculino</option>
+                        <option>Otro</option>
+                    </select>
+                </div>
             </div>
-            <div class="col">
-                <label for="gender-input">Género</label>
-                <select class="form-control" id="gender-input">
-                    <option>Femenino</option>
-                    <option>Masculino</option>
-                    <option>Otro</option>
-                </select>
+            <div class="form-group row">
+                <div class="col">
+                    <label for="emailInput" [ngClass]="{ 'red-color': submitted && f['emailInput'].errors }">Correo electrónico</label>
+                    <input type="text" class="form-control" id="emailInput" [ngClass]="{ 'is-invalid': submitted && f['emailInput'].errors }" formControlName="emailInput">
+                    <div *ngIf="submitted && f['emailInput'].errors" class="invalid-feedback">
+                        <div *ngIf="f['emailInput'].errors['required']">El correo electrónico es requerido</div>
+                        <div *ngIf="f['emailInput'].errors['email']">Formato de correo electrónico inválido</div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="form-group row">
-            <div class="col">
-                <label for="email-input">Correo electrónico</label>
-                <input type="text" class="form-control" id="email-input">
+            <div class="form-group row">
+                <div class="col">
+                    <label for="passwordInput" [ngClass]="{ 'red-color': submitted && f['passwordInput'].errors }">Contraseña</label>
+                    <input type="password" class="form-control" id="passwordInput"  [ngClass]="{ 'is-invalid': submitted && f['passwordInput'].errors }" formControlName="passwordInput">
+                    <div *ngIf="submitted && f['passwordInput'].errors" class="invalid-feedback">
+                        <div *ngIf="f['passwordInput'].errors['required']">La contraseña es requerida</div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="form-group row">
-            <div class="col">
-                <label for="password-input">Contraseña</label>
-                <input type="password" class="form-control" id="password-input">
+            <div class="form-group row">
+                <div class="col">
+                    <label for="passwordConfInput" [ngClass]="{ 'red-color': submitted && f['passwordConfInput'].errors }">Confirmación de Contraseña</label>
+                    <input type="password" class="form-control" id="passwordConfInput"  [ngClass]="{ 'is-invalid': submitted && f['passwordConfInput'].errors }" formControlName="passwordConfInput">
+                    <div *ngIf="submitted && f['passwordConfInput'].errors" class="invalid-feedback">
+                        <div *ngIf="f['passwordConfInput'].errors['required']">La confirmación de la contraseña es requerida</div>
+                        <div *ngIf="f['passwordConfInput'].errors['matching']">
+                            Confirm Password does not match
+                          </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="form-group row">
-            <div class="col">
-                <label for="password-conf-input">Confirmación de Contraseña</label>
-                <input type="password" class="form-control" id="password-conf-input">
+            <div class="form-group row">
+                <div class="col">
+                    <input type="checkbox" id="tycCheckbox" class="form-check-input" formControlName="tycCheckbox" [ngClass]="{ 'is-invalid': submitted && f['tycCheckbox'].errors }">
+                    <span [ngClass]="{ 'red-color': submitted && f['tycCheckbox'].errors }">Aceptar <u>términos y condiciones</u></span>
+                    <div *ngIf="submitted && f['tycCheckbox'].errors" class="invalid-feedback" >
+                        Debe aceptar los términos y condiciones
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="form-group row">
-            <div class="col">
-                <input type="checkbox" id="tyc-checkbox">
-                <span>Aceptar <u>términos y condiciones</u></span>
+            <div class="form-group row">
+                <div class="col">
+                    <input type="checkbox" id="policyCheckbox" class="form-check-input" formControlName="policyCheckbox" [ngClass]="{ 'is-invalid': submitted && f['policyCheckbox'].errors }">
+                    <span [ngClass]="{ 'red-color': submitted && f['policyCheckbox'].errors }">Aceptar <u>política de tratamiento de datos personales</u></span>
+                    <div *ngIf="submitted && f['policyCheckbox'].errors" class="invalid-feedback" >
+                        Debe aceptar la política de tratamiento de datos personales
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="form-group row">
-            <div class="col">
-                <input type="checkbox" id="tyc-checkbox">
-                <span>Aceptar <u>política de tratamiento de datos personales</u></span>
-            </div>
-        </div>
-        
+        </form>
             
       </div>
       <div class="col login">
-        <div class="form-group row">
-            <div class="col">
-                <label for="email-login-input">Correo electrónico</label>
-                <input type="text" class="form-control" id="email-login-input">
+        <form [formGroup]="loginForm">
+            <div class="form-group row">
+                <div class="col">
+                    <label for="emailLoginInput" [ngClass]="{ 'red-color': submittedLogin && g['emailLoginInput'].errors }">Correo electrónico</label>
+                    <input type="text" class="form-control" id="emailLoginInput" [ngClass]="{ 'is-invalid': submittedLogin && g['emailLoginInput'].errors }" formControlName="emailLoginInput">
+                    <div *ngIf="submittedLogin && g['emailLoginInput'].errors" class="invalid-feedback">
+                        <div *ngIf="g['emailLoginInput'].errors['required']">El correo electrónico es requerido</div>
+                        <div *ngIf="g['emailLoginInput'].errors['email']">Formato de correo electrónico inválido</div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="form-group row">
-            <div class="col">
-                <label for="password-login-input">Contraseña</label>
-                <input type="password" class="form-control" id="password-login-input">
+            <div class="form-group row">
+                <div class="col">
+                    <label for="passwordLoginInput" [ngClass]="{ 'red-color': submittedLogin && g['passwordLoginInput'].errors }">Contraseña</label>
+                    <input type="password" class="form-control" id="passwordLoginInput"  [ngClass]="{ 'is-invalid': submittedLogin && g['passwordLoginInput'].errors }" formControlName="passwordLoginInput">
+                    <div *ngIf="submittedLogin && g['passwordLoginInput'].errors" class="invalid-feedback">
+                        <div *ngIf="g['passwordLoginInput'].errors['required']">La contraseña es requerida</div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="form-group row">
-            <div class="col forgot-password">
-                <span>Olvidé mi contraseña</span>
+            <div class="form-group row">
+                <div class="col forgot-password">
+                    <span>Olvidé mi contraseña</span>
+                </div>
             </div>
-        </div>
+    </form>
       </div>
     </div>
     <div class="row">
-        <div class="col signup"><button class="btn btn-primary">REGISTRARSE</button></div>
-        <div class="col login"> <button class="btn btn-primary">LOGIN</button></div>
+        <div class="col signup"><button type="submit" (click)="onSubmit()" class="btn btn-primary">REGISTRARSE</button></div>
+        <div class="col login"> <button type="submit" (click)="onSubmitLogin()"  class="btn btn-primary">LOGIN</button></div>
     </div>
   </div>
