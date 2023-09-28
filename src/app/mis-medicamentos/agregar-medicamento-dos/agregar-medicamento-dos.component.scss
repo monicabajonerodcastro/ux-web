@@ -1,5 +1,9 @@
 @import '../../../styles.scss';
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{font-family: 'Roboto', sans-serif;}
+
 .agregar-medicamentos-title{
   font-size: 48px;
   grid-area: a;
