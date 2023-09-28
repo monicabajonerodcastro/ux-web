@@ -2,6 +2,9 @@
 
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{font-family: 'Roboto', sans-serif;}
 
 $main-color: #2B5E89;
 $white: #FFFFFF;
@@ -12,9 +15,7 @@ $principal-50:#98B3CA;
 $principal-25:#CBD9E5;
 $red-color: #D62A20;
 
-button{background-color: $main-blue !important;}
 
-button:hover{background-color:$dark-blue !important;}
 
 button:active{border:7px solid $ligth-blue !important;}
 

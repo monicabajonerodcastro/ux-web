@@ -1,5 +1,8 @@
 @import '../../styles.scss';
 
+button{background-color: $main-blue !important;}
+button:hover{background-color:$dark-blue !important;}
+
 .medicalarm-title{
     font-size: 70px;
     font-weight: bold;
@@ -19,7 +22,7 @@ img{
 
     .buttons-container{
         display: inline-grid;
-    
+
         button{
             width: 300px;
             height: 100px;

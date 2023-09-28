@@ -15,7 +15,7 @@ export class AgregarMedicamentoDosComponent implements OnInit {
 
 
   openModalOne() {
-
+    this.modalRef.close()
     this.modalRefOne = this.modalService.open(AgregarMedicamentoComponent, {
       modalClass: '.modal-lg', data: { combo1: '200gr c/8 horas' , combo2: '500gr c/12 horas'}
     })
