@@ -86,6 +86,7 @@ export class SignComponent {
       return;
     }
     console.log(JSON.stringify(this.loginForm.value, null, 2));
+    this._router.navigateByUrl('/main')
   }
 
   onReset(): void {
