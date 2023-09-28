@@ -1,0 +1,162 @@
+@import '../../../styles.scss';
+
+.agregar-medicamentos-title{
+  font-size: 48px;
+  grid-area: a;
+  font-weight: bold;
+  text-align: center;
+  color: $main-color
+}
+
+.regresar{
+  font-size: 24px;
+  color: $main-blue;
+  text-align: center;
+  background: none;
+  border: none;
+}
+
+.col{
+  text-align: center;
+}
+
+.col2{
+  margin-left: 5%;
+}
+
+
+#exampleFormControlInput1{
+  width: 470px;
+}
+
+#exampleFormControlSelect1{
+  width: 470px;
+}
+
+.container {
+  display: flexbox;
+  width: 495px !important;;
+  align-items: center;
+  justify-content: center;
+}
+
+.base-text{
+  font-size: 24px;
+  color: $main-blue
+}
+
+.base-text-input{
+  font-size: 24px;
+  color: $principal-50;
+  border: 1px solid $main-blue;
+}
+
+.others{
+  width: 121px;
+}
+
+.buttons-col{
+  margin: auto !important;
+
+  .buttons-container{
+      display: inline-grid;
+
+      button{
+          width: 374px;
+          height: 82px;
+          font-size: 25px;
+          color: $white;
+          background-color: $main-blue;
+          border: none;
+          border-radius: 10px;
+          text-align: center;
+
+      }
+
+      button:hover{background-color:$dark-blue}
+      button:active{border:7px solid $ligth-blue}
+  }
+}
+
+.bgblue{
+  background: $principal-25;
+  border-left: 5px solid rgb(255, 255, 255);
+  border-right: 5px solid rgb(255, 255, 255);
+}
+
+.x-b{
+  background: url("../../../assets/x.svg") center no-repeat;
+  display: flex;
+  justify-content: flex-end;
+  margin-left: auto;
+  margin-right: 0;
+
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+  border: none;
+  filter: invert(34%) sepia(60%) saturate(390%) hue-rotate(164deg) brightness(102%) contrast(111%);
+}
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $principal-25;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: $main-blue;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: $principal-25;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}

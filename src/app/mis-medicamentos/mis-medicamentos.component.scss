@@ -1,0 +1,102 @@
+@import '../../styles.scss';
+
+.mis-medicamentos-title{
+    font-size: 70px;
+    font-weight: bold;
+    color: $main-color
+}
+
+.col-title{
+  text-align: center;
+}
+
+.table {
+  height: 100%;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.mis-medicamentos-nombre{
+  font-size: 48px;
+  font-weight: bold;
+  color: $main-blue;
+}
+
+.buttons-texto{
+  font-size: 26px;
+  color: $principal-50;
+}
+
+.mis-medicamentos-frecuencia{
+  font-size: 48px;
+  color: $main-blue;
+}
+
+
+.buttons-col{
+    margin: auto !important;
+
+    .buttons-container{
+        display: inline-grid;
+
+        button{
+            width: 75px;
+            height: 75px;
+            color: $white;
+
+
+            background-size: contain;
+            border: none;
+            filter: invert(34%) sepia(60%) saturate(390%) hue-rotate(164deg) brightness(102%) contrast(111%);
+        }
+
+        button:hover{filter: invert(30%) sepia(18%) saturate(1587%) hue-rotate(165deg) brightness(90%) contrast(94%);}
+        button:active{border:7px solid $ligth-blue}
+    }
+}
+
+.buttons-col-add-share{
+  display: flex;
+  justify-content: flex-end;
+  margin-left: auto;
+  margin-right: 0;
+
+  .buttons-container{
+      display: inline-grid;
+
+      button{
+          width: 75px;
+          height: 75px;
+          color: $white;
+
+
+          background-size: contain;
+          border: none;
+          filter: invert(34%) sepia(60%) saturate(390%) hue-rotate(164deg) brightness(102%) contrast(111%);
+      }
+
+      button:hover{filter: invert(30%) sepia(18%) saturate(1587%) hue-rotate(165deg) brightness(90%) contrast(94%);}
+      button:active{border:7px solid $ligth-blue}
+  }
+}
+
+
+
+
+.edit-b{
+  background: url("../../assets/edit.svg") center no-repeat;
+}
+
+.delete-b{
+  background: url("../../assets/delete.svg") center no-repeat;
+}
+
+.add-b{
+  background: url("../../assets/add.svg") center no-repeat;
+  margin-left: 5px;
+}
+
+.share-b{
+  background: url("../../assets/share.svg") center no-repeat;
+  margin-left: 20px;
+}

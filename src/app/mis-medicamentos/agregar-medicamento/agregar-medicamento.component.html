@@ -1,0 +1,84 @@
+<div class="container">
+  <div>
+    <button class="x-b" (click)="modalRef.close()"></button>
+  </div>
+  <div class="row">
+    <div class="col">
+      <span class="agregar-medicamentos-title">Agregar Medicamento</span>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col2">
+      <label class="base-text" for="exampleFormControlInput1">Nombre:</label>
+      <br>
+    </div>
+    <div class="col">
+      <input class="base-text-input" type="text" id="exampleFormControlInput1" value="{{ name }}">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col2">
+      <label class="base-text" for="exampleFormControlSelect1">Frecuencia de administración:</label>
+      <br>
+    </div>
+    <div class="col">
+      <select class="base-text-input" id="exampleFormControlSelect1">
+        <option>{{combo1}}</option>
+        <option>{{combo2}}</option>
+        <option>2mg c/6 horas</option>
+        <option>5mg c/24 horas</option>
+      </select>
+    </div>
+  </div>
+  <br><br><br>
+  <div class="row">
+    <div class="col2">
+      <span class="base-text">Alarma:</span>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col">
+      <span class="col base-text">Sugerencias&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+      <span class="col base-text">Otro</span>
+    </div>
+  </div>
+  <div class="row">
+    <table >
+      <tr class="col">
+        <td class="base-text bgblue">05:00am</td>
+        <td class="base-text bgblue">07:00am</td>
+        <td class="base-text bgblue">
+          <select class="base-text-input others">
+            <option>am</option>
+            <option>pm</option>
+          </select>
+        </td>
+      </tr>
+      <tr class="col">
+        <td class="base-text bgblue">01:00pm</td>
+        <td class="base-text bgblue">03:00pm</td>
+        <td class="base-text bgblue">
+          <input class="base-text-input others" type="number" min="0">
+        </td>
+      </tr>
+      <tr class="col">
+        <td class="base-text bgblue">09:00pm</td>
+        <td class="base-text bgblue">11:00pm</td>
+        <td class="base-text bgblue">
+          <input class="base-text-input others" type="number" min="0">
+        </td>
+      </tr>
+  </table>
+  </div>
+  <br><br>
+  <div>
+    <div class="col buttons-col">
+      <div class="buttons-container">
+        <button (click)="openModalTwo()">Continuar</button>
+      </div>
+    </div>
+  </div>
+  <br><br>
+</div>
