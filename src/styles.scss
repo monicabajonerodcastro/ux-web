@@ -10,3 +10,11 @@ $dark-blue: #265175;
 $ligth-blue:#AFC3D6;
 $principal-50:#98B3CA;
 $principal-25:#CBD9E5;
+$red-color: #D62A20;
+
+button{background-color: $main-blue !important;}
+
+button:hover{background-color:$dark-blue !important;}
+
+button:active{border:7px solid $ligth-blue !important;}
+

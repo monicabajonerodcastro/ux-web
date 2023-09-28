@@ -10,11 +10,24 @@ import { MisMedicamentosModule } from './mis-medicamentos/mis-medicamentos.modul
   declarations: [
     AppComponent
    ],
+
+import { ReactiveFormsModule } from '@angular/forms';
+
+import { SignComponent } from './sign/sign.component';
+import { MainComponent } from './main/main.component';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    SignComponent,
+    MainComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    MisMedicamentosModule
+    MisMedicamentosModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
