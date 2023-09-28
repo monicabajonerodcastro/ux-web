@@ -1,0 +1,66 @@
+<div class="container">
+  <div>
+    <button class="x-b" (click)="modalRef.close()"></button>
+  </div>
+  <div class="row">
+    <div class="col">
+      <span class="agregar-medicamentos-title">Agregar Medicamento</span>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col2">
+      <label class="base-text" for="exampleFormControlSelect1">Tono de alarma:</label>
+      <br>
+    </div>
+    <div class="col">
+      <select class="base-text-input" id="exampleFormControlSelect1">
+        <option>Predeterminado</option>
+        <option>Samsung tone</option>
+        <option>Xiaomi tone</option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col2">
+      <label class="base-text" for="exampleFormControlInput1">Mensaje:</label>
+      <br>
+    </div>
+    <div class="col">
+      <input class="base-text-input" type="text" id="exampleFormControlInput1" value="Tomar medicamento..." onfocus="this.value=''">
+    </div>
+  </div>
+  <br><br><br>
+  <div class="row">
+    <div class="col">
+      <span class="base-text">Posponer:</span>
+    </div>
+    <div class="col">
+      <label class="switch">
+        <input type="checkbox">
+        <span class="slider round"></span>
+      </label>
+    </div>
+    <div class="col">
+      <input class="base-text-input others" type="number" min="0">
+    </div>
+    <div class="col">
+      <span class="base-text">minutos</span>
+    </div>
+  </div>
+  <br>
+  <br><br>
+  <div>
+    <div class="col buttons-col">
+      <div class="buttons-container">
+        <button (click)="modalRef.close()">Guardar</button>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <button class="regresar" (click)="openModalOne()"><u>Regresar</u></button>
+    </div>
+  </div>
+  <br><br>
+</div>

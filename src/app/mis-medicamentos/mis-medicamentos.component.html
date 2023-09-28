@@ -1,0 +1,63 @@
+<div class="container" [ngStyle]="{'background-color': bgColor}">
+  <div class="row">
+    <div class="col col-title">
+      <span class="mis-medicamentos-title">Mis Medicamentos</span>
+    </div>
+  </div>
+  <div class="row">
+    <table>
+      <tr class="col">
+        <td class="mis-medicamentos-nombre">Levotiroxina</td>
+        <td class="mis-medicamentos-frecuencia">200 gr</td>
+        <td class="mis-medicamentos-frecuencia">c/8 horas</td>
+        <td class="col buttons-col">
+          <div class="buttons-container">
+            <button class="edit-b" (click)="openModalItemOne()"></button>
+          </div>
+          <span class="buttons-texto">Editar</span>
+        </td>
+        <td class="col buttons-col">
+          <div class="buttons-container">
+            <button class="delete-b"></button>
+          </div>
+          <span class="buttons-texto">Eliminar</span>
+        </td>
+      </tr>
+
+      <tr class="col">
+        <td class="mis-medicamentos-nombre">Acetaminofén</td>
+        <td class="mis-medicamentos-frecuencia">500 gr</td>
+        <td class="mis-medicamentos-frecuencia">c/12 horas</td>
+        <td class="col buttons-col">
+          <div class="buttons-container">
+            <button class="edit-b" (click)="openModalItemTwo()"></button>
+          </div>
+          <span class="buttons-texto">Editar</span>
+        </td>
+        <td class="col buttons-col">
+          <div class="buttons-container">
+            <button class="delete-b"></button>
+          </div>
+          <span class="buttons-texto">Eliminar</span>
+        </td>
+      </tr>
+  </table>
+  </div>
+  <div><br><br><br><br><br><br><br></div>
+  <div>
+    <div class="col buttons-col-add-share">
+      <div class="buttons-container">
+        <span class="buttons-texto">Agregar&nbsp;</span>
+        <button class="add-b" (click)="openModal()"></button>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="col buttons-col-add-share">
+      <div class="buttons-container">
+        <span class="buttons-texto">Compartir</span>
+        <button class="share-b"></button>
+      </div>
+    </div>
+  </div>
+</div>
